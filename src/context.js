@@ -15,8 +15,8 @@ class RoomProvider extends Component {
     minPrice:0,
     maxPrice:0,
     place:"Shimla",
-    breakfast:false,
-    pets:false
+    // breakfast:false,
+    // pets:false
   };
 
   //getData
@@ -29,8 +29,6 @@ class RoomProvider extends Component {
     //Calculating the Max Price from all the rooms
     let maxPrice = Math.max(...rooms.map(item =>item.price))
 
-    //Calculating the Max Size from all the rooms
-    // let maxSize = Math.max(...rooms.map(item =>item.size))
     
 
     
