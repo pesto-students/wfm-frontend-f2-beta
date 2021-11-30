@@ -74,7 +74,7 @@ class RoomProvider extends Component {
 
   filterRooms = () =>{
     //   console.log("Hello");
-    let {rooms,type,capacity,price,place,breakfast,pets} = this.state;
+    let {rooms,type,capacity,price,place} = this.state;
 
     //All the rooms
     let tempRooms =[...rooms];
@@ -103,9 +103,9 @@ class RoomProvider extends Component {
     }
 
     //filter by Price
-    {
+    
         tempRooms = tempRooms.filter(room =>room.price <=price)
-    }
+    
 
     this.setState({
         sortedRooms:tempRooms

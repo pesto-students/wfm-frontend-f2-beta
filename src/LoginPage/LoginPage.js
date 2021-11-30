@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import LoadingGif from '../images/loading-arrow.gif'
 import { userActions } from '../actions';
 
 class LoginPage extends React.Component {
@@ -41,17 +42,17 @@ class LoginPage extends React.Component {
         const { username, password, submitted } = this.state;
         return (
             <div >
-                {/* <h2>Login</h2> */}
+                {/* This is login form */}
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
-                        <label htmlFor="username">Username</label>
+                        <label htmlFor="username">Username(Registered Email)*</label>
                         <input type="text"  name="username" value={username} onChange={this.handleChange} />
                         {submitted && !username &&
                             <div >Username is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">Password*</label>
                         <input type="password"  name="password" value={password} onChange={this.handleChange} />
                         {submitted && !password &&
                             <div>Password is required</div>
@@ -60,7 +61,7 @@ class LoginPage extends React.Component {
                     <div >
                         <button >Login</button>
                         {loggingIn &&
-                            <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="From Login Page" />
+                            <img src={LoadingGif} alt="From Login Page" />
                         }
                         <Link to="/register" >Register</Link>
                     </div>

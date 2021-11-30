@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+
 import { userActions } from '../actions';
+
+import BookedProperty from '../pages/BookedProperty';
 
 class HomePage extends React.Component {
     componentDidMount() {
@@ -14,28 +17,12 @@ class HomePage extends React.Component {
     }
 
     render() {
-        const { user, users } = this.props;
+        const { user} = this.props;
         return (
             <div >
                 <h1>Hi {user.firstName}!</h1>
-                <p>Welcome </p>
-                {/* <h3>All registered users:</h3> */}
-                {/* {users.loading && <em>Loading users...</em>} */}
-                {/* {users.error && <span className="text-danger">ERROR: {users.error}</span>} */}
-                {/* {users.items && */}
-                    {/* <ul> */}
-                        {/* {users.items.map((user, index) =>
-                            <li key={user.id}>
-                                {user.firstName + ' ' + user.lastName}
-                                {
-                                    user.deleting ? <em> - Deleting...</em>
-                                    : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
-                                    : <span> - <a onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
-                                }
-                            </li>
-                        )}
-                    </ul>
-                } */}
+                <h6>Welcome </h6>
+                <BookedProperty/>
                 <p>
                     <Link to="/login">Logout</Link>
                 </p>

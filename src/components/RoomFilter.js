@@ -20,8 +20,8 @@ const RoomFilter = ({rooms}) => {
         minPrice,
         maxPrice,
         place,
-        breakfast,
-        pets
+        // breakfast,
+        // pets
     } = context
 
 

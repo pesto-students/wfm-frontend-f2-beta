@@ -9,7 +9,7 @@ import { PrivateRoute } from '../logincomponents/PrivateRoute';
 import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
 import { RegisterPage } from '../RegisterPage';
-import Hero from '../logincomponents/Hero';
+
 
 class LoginApp extends React.Component {
     constructor(props) {
@@ -39,7 +39,6 @@ class LoginApp extends React.Component {
                                 <Redirect from="*" to="/" />
                             </Switch>
                         </Router>
-                        <Hero/>
                     </div>
                 </div>
             </div>

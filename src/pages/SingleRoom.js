@@ -5,6 +5,7 @@ import Banner from '../components/Banner'
 import {Link} from "react-router-dom"
 import { RoomContext } from '../context';
 import StyledHero from '../components/styledHero';
+import Navbar from '../components/Navbar';
 
 
 export default class SingleRoom extends Component {
@@ -32,12 +33,13 @@ export default class SingleRoom extends Component {
             </div>
         }
 
-        const {name,description,capacity,place,price,extras,breakfast,pets,images} = room
+        const {name,description,capacity,place,price,distance,extras,breakfast,pets,images} = room
 
         const [mainImg,...defaultImage] = images;
         
         return (
             <div>
+                <Navbar/>
                 <StyledHero img={mainImg }>
                     <Banner title={`${name} room`}>
                     <Link to='/Login' className="btn-primary">Book Property</Link>
@@ -58,6 +60,7 @@ export default class SingleRoom extends Component {
                             <h3>info</h3>
                             <h3>Price: ₹{price} per-night</h3>
                             <h3>Place:{place}</h3>
+                            <h5>Distance(From Delhi):{distance}</h5>
                             <h6>max capacity : {capacity > 1 ? `${capacity} people`:`${capacity} Person`}</h6>
                             <h6>{pets ?"Pets allowed":"No Pets Allowed"}</h6>
                             <h6>{breakfast && "free-breakfast"}</h6>

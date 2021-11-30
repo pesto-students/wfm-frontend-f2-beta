@@ -51,28 +51,28 @@ class RegisterPage extends React.Component {
                 <h2>Register</h2>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !user.firstName ? ' has-error' : '')}>
-                        <label htmlFor="firstName">First Name</label>
+                        <label htmlFor="firstName">First Name*</label>
                         <input type="text"  name="firstName" value={user.firstName} onChange={this.handleChange} />
                         {submitted && !user.firstName &&
                             <div >First Name is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.lastName ? ' has-error' : '')}>
-                        <label htmlFor="lastName">Last Name</label>
+                        <label htmlFor="lastName">Last Name*</label>
                         <input type="text"  name="lastName" value={user.lastName} onChange={this.handleChange} />
                         {submitted && !user.lastName &&
                             <div >Last Name is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.username ? ' has-error' : '')}>
-                        <label htmlFor="username">Username</label>
+                        <label htmlFor="username">Username*(Please put Email to register)</label>
                         <input type="text" name="username" value={user.username} onChange={this.handleChange} />
                         {submitted && !user.username &&
                             <div >Username is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
-                        <label htmlFor="password">Password</label>
+                        <label htmlFor="password">Password*</label>
                         <input type="password"  name="password" value={user.password} onChange={this.handleChange} />
                         {submitted && !user.password &&
                             <div >Password is required</div>

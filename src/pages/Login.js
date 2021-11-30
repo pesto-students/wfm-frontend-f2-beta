@@ -8,18 +8,20 @@ import { LoginApp } from "../loginapp/LoginApp";
 
 // setup fake backend
 import { configureFakeBackend } from "../helpers/fake-backend";
-import Banner from "../components/Banner";
+import LoginNavBar from "../logincomponents/LoginNavBar";
+
 configureFakeBackend();
 
 const Login = () => {
   return (
     <>
+    <LoginNavBar/>
       <Hero>
-        <div className="single-room-info">
-          <article className="desc">
-            <Banner title="Login" subtitle="And Book your property"></Banner>
-          </article>
-          <article className="info">
+        <div className="social">
+          {/* <article className="social-centre"> */}
+            {/* This component is used to navigate to login page */}
+          {/* </article> */}
+          <article >
             <Provider store={store}>
               <LoginApp />
             </Provider>
