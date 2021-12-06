@@ -93,7 +93,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1rem;
   /* background: var(--offWhite); */
   background: black;
   z-index: 1;
@@ -121,21 +121,21 @@ h6 {
 .nav-links a {
   display: block;
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 2rem 0;
   /* color: var(--mainBlack); */
   color: white;
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 530;
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
   color: var(--primaryColor);
 }
-
+/* This sets the height of navbar when in mobile version */
 .show-nav {
-  height: 200px;
+  height: 320px;
 }
 @media screen and (min-width: 768px) {
   .nav-btn {
@@ -149,7 +149,7 @@ h6 {
   .nav-links {
     height: auto;
     display: flex;
-    margin-left: 40rem;
+    margin-left: 35rem;
   }
   .nav-links a {
     margin: 0 1rem;
@@ -548,7 +548,7 @@ h6 {
   padding: 1rem 0;
 }
 .social {
-  background:white;
+  background:rgb(255, 255, 255);
   text-align: center;
 }
 .social-center {
@@ -558,14 +558,6 @@ h6 {
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-row-gap: 1rem;
   grid-column-gap: 1px;
-}
-.social span {
-  display: inline-block;
-  color: var(--primaryColor);
-  margin-bottom: 1.5rem;
-}
-.social h6 {
-  letter-spacing: var(--mainSpacing);
 }
 @media screen and (min-width: 992px) {
   .social-center {
@@ -651,7 +643,7 @@ h6 {
   transition: all 0.3s linear;
 }
 .booking-container:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(206, 201, 201, 0.8);
 }
 .booking-container:hover img {
   opacity: 0.3;
@@ -661,7 +653,7 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .book-room-info {
-  background:linen;
+  background:rgb(155, 149, 180);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
@@ -684,31 +676,27 @@ h6 {
   padding: 2rem 0;
 }
 .booking-services {
-  background:rgb(185, 184, 181);
-  border-radius: 10px;
+  background:rgb(176, 177, 180);
+  border-radius: 5px;
   text-align: center;
 }
 .booking-services-center {
-  width: 50vw;
+  width: 45vw;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
+  opacity: 0.9;
 }
-.service span {
-  display: inline-block;
-  color: var(--primaryColor);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+div:hover {
+  opacity: 1.0;
 }
+
 .services h6 {
   letter-spacing: var(--mainSpacing);
 }
-.services p {
-  width: 80%;
-  margin: 0 auto;
-}
+
 @media screen and (min-width: 992px) {
   .booking-services-center {
     width: 30vw;
@@ -723,3 +711,79 @@ h6 {
 }
 
 /* Booking section end */
+
+
+/* Login Page style start */
+.login_div {
+  position: absolute;
+  background-color: rgb(208, 231, 231);
+  width: 300px;
+  left: 300px;
+  height: 356px;
+  text-align: center;
+  /* opacity: 0.8; */
+  border-radius: 5px;
+
+
+}
+
+.login_terms{
+  font-weight: 1;
+}
+
+.login_button_div{
+  margin: 8px;
+  padding: 8px;
+}
+
+
+.main_login_div{
+  position: absolute;
+  background-color: rgb(20, 40, 220);
+  width: 600px;
+  height: 356px;
+}
+.img_div{
+position: absolute;
+width: 280px;
+height: 200px;
+/* top:208px; */
+left: 1px;
+}
+
+.logout_div{
+  background-color: cyan;
+}
+
+.main_logout_div{
+  text-align: center;
+}
+
+.parent_booked_property{
+  box-sizing: border-box;
+  display: flex;
+}
+
+.child_booked_property{
+  /* border: 5px solid red; */
+  background-color: rgb(230, 229, 236);
+  text-align: center;
+  width: 400px;
+  border-radius: 5px;
+  /* opacity: 0.9; */
+}
+.checkout_booked_property{
+  border: 5px solid red;
+  text-align: center;
+}
+
+.checkout_div{
+  margin: 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px){
+  .parent_booked_property{
+    display:flex;
+  }
+}

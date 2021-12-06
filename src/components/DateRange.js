@@ -30,9 +30,9 @@ class DateRange extends React.Component {
     return (
       <div>
         {/* <div>Selection</div> */}
-        {this.state.value.start.format("YYYY-MM-DD")}
+        {this.state.value.start.format("DD-MM-YYYY")}
         {" - "}
-        {this.state.value.end.format("YYYY-MM-DD")}
+        {this.state.value.end.format("DD-MM-YYYY")}
       </div>
     );
   };
@@ -45,7 +45,7 @@ class DateRange extends React.Component {
         <div>
           <input
             type="button"
-            value="Pick your Dates"
+            value="Pick Dates "
             onClick={this.onToggle} className="btn-primary book-rooms-center"
           />
         </div>

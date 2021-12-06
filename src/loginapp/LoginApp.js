@@ -25,10 +25,9 @@ class LoginApp extends React.Component {
     render() {
         const { alert } = this.props;
         return (
-            <div className = "App">
+            <div>
                 <div >
-                    <div >
-                        
+                    <div>                    
                         {alert.message &&
                             <div className={`alert ${alert.type}`}>{alert.message}</div>
                         }

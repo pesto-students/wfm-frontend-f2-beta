@@ -17,7 +17,7 @@ export default class FeaturedRooms extends Component {
         // console.log(rooms);
         return (
             <section className="featured-rooms">
-                <Title title="Top Listed Work Places"/>
+                <Title title="Experience a Home with Local People in Mountains..."/>
                 <div className="featured-rooms-center">
                     {loading?<Loading/>:rooms}
                 </div>                                

@@ -2,6 +2,9 @@ import React,{useContext} from 'react'
 import { RoomContext } from '../context'
 import Title from '../components/Title'
 
+
+
+
 //get all the unique values
 const getUnique = (items,value) =>{
     return [...new Set(items.map(item => item[value]))]
@@ -20,8 +23,6 @@ const RoomFilter = ({rooms}) => {
         minPrice,
         maxPrice,
         place,
-        // breakfast,
-        // pets
     } = context
 
 
@@ -40,7 +41,7 @@ const RoomFilter = ({rooms}) => {
         return <option value={item} key ={index}>{item}</option>
     })
 
-    //map to JSX (Number of People)
+    //map to JSX (Number of Work Space available)
     let people = getUnique(rooms,'capacity');
     people = people.map((item,index) =>{
         return <option value={item} key={index}>{item}</option>
@@ -53,6 +54,7 @@ const RoomFilter = ({rooms}) => {
 
 
     return (
+        <>
         <section  className="filter-container">
             <Title title="Search a Property"/>
             <form className="filter-form">
@@ -96,6 +98,8 @@ const RoomFilter = ({rooms}) => {
                 
             </form>
         </section>
+        
+        </>
     )
 }
 

@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import '../App.css'
 
 import LoadingGif from '../images/loading-arrow.gif'
+import sidebar from '../images/sidebar-login.jpeg'
 import { userActions } from '../actions';
+
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -42,7 +44,15 @@ class LoginPage extends React.Component {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
         return (
-            <div >
+            <>
+            
+            <div className="img_div">
+            <img src={sidebar} width="300px" height="356px" alt="sidebar-img"/>
+            </div>
+            <section>
+            <div >            
+                <div className="login_div">
+                <h3>Login</h3>
                 {/* This is login form */}
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
@@ -59,15 +69,23 @@ class LoginPage extends React.Component {
                             <div>Password is required</div>
                         }
                     </div>
-                    <div >
-                        <button >Login</button>
+                    <div className="login_button_div">
+                        <button className="btn-primary">Login</button>
                         {loggingIn &&
                             <img src={LoadingGif} alt="From Login Page" />
-                        }
-                        <Link to="/register" >Register</Link>
+                        }                        
+                                          
                     </div>
+                    <hr/> 
+                    <h6>Don't have an account?</h6>
+                    <Link to="/register" >Register</Link>
                 </form>
+                <p className="login_terms">*By logging in, I understand & agree to wfm terms and conditions</p>
             </div>
+            </div>
+            </section>
+            
+            </>
         );
     }
 }

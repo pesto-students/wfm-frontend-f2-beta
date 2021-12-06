@@ -3,6 +3,7 @@ import RoomFilter from "./RoomFilter";
 import RoomList from "./RoomList";
 import { withRoomConsumer } from "../context";
 import Loading from "./Loading";
+import Copyright from '../components/Copyright'
 
 function RoomsContainer({context}){
 
@@ -14,6 +15,7 @@ function RoomsContainer({context}){
                   <div>
                     <RoomFilter rooms={rooms}/>
                     <RoomList rooms={sortedRooms} />
+                    <Copyright/>
                   </div>
                 )
     

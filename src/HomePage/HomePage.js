@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import '../App.css'
 
 
 import { userActions } from '../actions';
@@ -19,12 +20,12 @@ class HomePage extends React.Component {
     render() {
         const { user} = this.props;
         return (
-            <div >
+            <div className="main_logout_div">
                 <h1>Hi {user.firstName}!</h1>
                 <h6>Welcome </h6>
                 <BookedProperty/>
                 <p>
-                    <Link to="/login">Logout</Link>
+                    <Link to="/login" className="btn-primary">Logout</Link>
                 </p>
             </div>
         );

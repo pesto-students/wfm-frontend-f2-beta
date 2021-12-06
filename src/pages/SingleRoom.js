@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import defaultBcg from '../images/room-1.jpeg';
 import Banner from '../components/Banner'
 
+import Copyright from '../components/Copyright'
+
 import {Link} from "react-router-dom"
 import { RoomContext } from '../context';
 import StyledHero from '../components/styledHero';
 import Navbar from '../components/Navbar';
+
 
 
 export default class SingleRoom extends Component {
@@ -14,18 +17,30 @@ export default class SingleRoom extends Component {
         super(props)
         // console.log(this.props);
         this.state ={
-            slug : this.props.match.params.slug,defaultBcg
+            slug : this.props.match.params.slug,defaultBcg,
+            bookId:0,
         }
+        
+    }
+  
+
+    handleClick=(name)=>{
+        // const {getRoom} = this.context;
+        // const room = getRoom(this.state.slug);
+        console.log("Button is clicked"); 
+        this.setState({
+            slug:this.props.match.params.slug
+        })
     }
 
-    static contextType = RoomContext;
-    // componentDidMount(){}
+    static contextType = RoomContext;        
 
-
-    render() {
+    render() {        
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
+        // console.log(this.context);
         // console.log(room);
+
         if(!room){
             return <div className="error">
                 <h3>No Such Property found</h3>
@@ -43,7 +58,7 @@ export default class SingleRoom extends Component {
                 <StyledHero img={mainImg }>
                     <Banner title={`${name} home`}>
                     {/* On Click will book the property */}
-                    <button onClick={this.onAdd}><Link to='/Booked-properties' className="btn-primary">Book Property</Link></button>
+                    <button onClick={()=>this.handleClick(name)}><Link to='/Booked-properties' className="btn-primary">Book Property</Link></button>
                     </Banner>
                 </StyledHero> 
                 <section className="single-room">
@@ -77,7 +92,7 @@ export default class SingleRoom extends Component {
                             })}
                         </ul>
                 </section>
-                
+                <Copyright/>
             </div>
         )
     }

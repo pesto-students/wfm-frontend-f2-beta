@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-// import Title from '../components/Title'
 
 import { Provider } from "react-redux";
 import { store } from "../helpers/store";
@@ -17,10 +16,10 @@ const Login = () => {
     <>
     <LoginNavBar/>
       <Hero>
-        <div className="social">
+        <div className="main_login_div">       
           <article >
-            <Provider store={store}>
-              <LoginApp />
+            <Provider store={store}>              
+              <LoginApp/>
             </Provider>
           </article>
         </div>

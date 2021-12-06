@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import sidebar from '../images/sidebar-login.jpeg'
+import '../App.css'
 
 import { userActions } from '../actions';
 
@@ -47,7 +49,11 @@ class RegisterPage extends React.Component {
         const { registering  } = this.props;
         const { user, submitted } = this.state;
         return (
-            <div >
+            <>
+            <div className="img_div">
+            <img src={sidebar} width="300px" height="356px" alt="sidebar-img"/>
+            </div>
+            <div className="login_div" >
                 <h2>Register</h2>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !user.firstName ? ' has-error' : '')}>
@@ -87,6 +93,7 @@ class RegisterPage extends React.Component {
                     </div>
                 </form>
             </div>
+            </>
         );
     }
 }

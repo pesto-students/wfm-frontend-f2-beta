@@ -5,22 +5,29 @@ import items from "./data";
 //This is context for all the consumers
 const RoomContext = React.createContext();
 
-class RoomProvider extends Component {
+class RoomProvider extends Component {  
+
+  //Initial states 
   state = {
     rooms: [],
     sortedRooms: [],
     featuredRooms: [],
+    bookedRooms:[],
     loading: true,
     type:'all',
     capacity:1,
+    slug:'single-economy',
     price:0,
     minPrice:0,
     maxPrice:0,
+    bookId:0,
     place:"Shimla",
     // breakfast:false,
     // pets:false
   };
 
+
+  
   //getData
 
   componentDidMount() {
@@ -32,16 +39,26 @@ class RoomProvider extends Component {
     //Calculating the Max Price from all the rooms
     let maxPrice = Math.max(...rooms.map(item =>item.price))
 
+    //Calculate random booking-Id
+    const min = 1;
+    const max = 100;
+    const bookId = Math.floor(min + (Math.random() * (max - min)));
+
+
     
+    //states updated
     this.setState({
       rooms,
       featuredRooms,
-      sortedRooms: rooms,
+      sortedRooms: rooms,      
       loading: false,
       price:maxPrice,
+      slug:'None',
       maxPrice,
+      bookId:bookId,
+      bookedRooms:rooms,
+      // place,
     //   maxSize
-    // place
     });
   }
 
@@ -73,8 +90,19 @@ class RoomProvider extends Component {
     //   console.log(type,name,value);
   }
 
+  handleClick=(event)=>{
+  //   const value =event.type.target.value    
+  //   const name = event.target.name
+    // console.log(slug);
+    this.setState({
+      slug:'BookYourRoom'
+    },this.bookedRooms)    
+  }
+
+
+
   filterRooms = () =>{
-    //   console.log("Hello");
+    //   
     let {rooms,type,capacity,price,place} = this.state;
 
     //All the rooms
@@ -114,10 +142,21 @@ class RoomProvider extends Component {
 
   }
 
+  bookedRooms=()=>{
+    let {rooms} = this.state;
+    let tempRooms =[...rooms];  
+    // tempRooms = tempRooms.filter(room =>room.name ===name)  
+    // console.log("Hello");
+    this.setState({
+      bookedRooms:tempRooms
+  })
+  }
+
+ 
 
   render() {
     return (
-      <RoomContext.Provider value={{ ...this.state,getRoom:this.getRoom,handleChange:this.handleChange}}>
+      <RoomContext.Provider value={{ ...this.state,getRoom:this.getRoom,handleChange:this.handleChange,handleClick:this.handleClick}}>
         {this.props.children}
       </RoomContext.Provider>
     );

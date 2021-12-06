@@ -29,9 +29,9 @@ export default class Navbar extends Component {
                         </button>
                     </div>
                     <ul className={this.state.isOpen?"nav-links show-nav":"nav-links"}>
-                        <li>
+                        {/* <li>
                             <Link to="/">Home</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/properties">Properties</Link>
                         </li>
@@ -39,9 +39,11 @@ export default class Navbar extends Component {
                             <Link to="/about-us">About-Us</Link>
                         </li>
                         <li>
-                            <Link to="/Booked-properties">Login / SignUp</Link>
+                            <Link to="/Booked-properties">Bookings</Link>
                         </li>
-
+                        <li>
+                            <Link to="/Login">Login-SignUp</Link>
+                        </li>
                     </ul>
 
                 </div>
