@@ -32,7 +32,7 @@ const SocialLinks = () => {
   return (
     <div>
       <section className="social">
-        <h6>connect with us</h6>
+        <h6 style={{color:'white',marginBottom:0}}>Connect with us</h6>
         <div className="social-center">
           {state.social.map((item, index) => {
             return (

@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import {Link} from "react-router-dom"
 import SocialLinks from '../components/SocialLinks'
 import Navbar from '../components/Navbar'
+import Copyright from '../components/Copyright'
 
 const About = () => {
     return (
@@ -17,6 +18,7 @@ const About = () => {
                 </Banner>                             
             </Hero> 
             <SocialLinks/>
+            <Copyright/>
             
         </div>
     )

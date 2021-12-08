@@ -6,6 +6,8 @@ import DateRange from '../components/DateRange'
 import Hero from '../components/Hero'
 import '../App.css'
 
+import { useLocation } from 'react-router-dom'
+
 
 import { RoomContext } from '../context';
 import LoginByGoogle from '../components/LoginByGoogle'
@@ -15,20 +17,24 @@ const BookedProperties = () => {
 
     const context = useContext(RoomContext)
 
+    const location = useLocation()
+
+    console.log(location);
+    const { from ,price} = location.state
+
+    // console.log(props);
+    // console.log(from);
+    // console.log(price);
 
     const{
-        rooms,
         bookId,
-        bookedRooms,        
-        // price,
-        // place,
     } = context
 
 
     console.log(context);
 
 
-    if(bookedRooms.length === 0){
+    if(location.key === ""){
         return(
             <>
             <Navbar/>
@@ -46,10 +52,10 @@ const BookedProperties = () => {
             <Hero>
                 <section style={{marginTop:'40px',paddingTop:'30px'}} className="parent_booked_property">
                     <section className="child_booked_property">
-                        <h5>Property: {rooms[0].name} home</h5>
+                        <h5>Property: {from} home</h5>
                         <h6>Booking id :{bookId}</h6>
                         {/* <h3>At: {rooms[0].place}</h3> */}
-                        {/* <h4>Price: ₹{rooms[0].price} per-night</h4>     */}
+                        <h4>Price: ₹{price} per-night</h4>    
                         {/* <h6>Work Space for : {rooms[0].capacity > 1 ? `${rooms[0].capacity} people`:`${rooms[0].capacity} Person`}</h6>                    */}
                         <h4>Select dates for your stay</h4>
                         <h6>Selected dates:</h6>

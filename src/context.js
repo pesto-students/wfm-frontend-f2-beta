@@ -6,8 +6,7 @@ import items from "./data";
 const RoomContext = React.createContext();
 
 class RoomProvider extends Component {  
-
-  //Initial states 
+  
   state = {
     rooms: [],
     sortedRooms: [],

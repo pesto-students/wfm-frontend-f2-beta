@@ -10,6 +10,8 @@ const BookedProperty = () => {
     } = context
 
 
+    console.log(context);
+
     return (
         <div className="logout_div">
             <h3>Property is Booked Now</h3>

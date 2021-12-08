@@ -19,19 +19,22 @@ export default class SingleRoom extends Component {
         this.state ={
             slug : this.props.match.params.slug,defaultBcg,
             bookId:0,
+            name:this.props.match.params.slug,
         }
         
     }
-  
+
 
     handleClick=(name)=>{
-        // const {getRoom} = this.context;
-        // const room = getRoom(this.state.slug);
-        console.log("Button is clicked"); 
-        this.setState({
-            slug:this.props.match.params.slug
-        })
+        // console.log("Button is clicked"); 
+        // console.log(this);
+        name = Object.assign({},this.state.name);
+        name="state changed";
+        this.setState({name});
+        console.log(this);
     }
+
+    // handleClick = this.handleClick.bind(this);
 
     static contextType = RoomContext;        
 
@@ -56,9 +59,16 @@ export default class SingleRoom extends Component {
             <div>
                 <Navbar/>
                 <StyledHero img={mainImg }>
-                    <Banner title={`${name} home`}>
+                    <Banner title={`${name} home`} handleBookedProperty={this.handleBookedProperty} >
                     {/* On Click will book the property */}
-                    <button onClick={()=>this.handleClick(name)}><Link to='/Booked-properties' className="btn-primary">Book Property</Link></button>
+
+                    <button key={name} onClick={this.handleClick.bind(this,name)}>
+                        <Link to={{pathname:'/Booked-properties', 
+                    state:{ 
+                        from: name,
+                        price:price
+                         }
+                         }} className="btn-primary" >Book Property</Link></button>
                     </Banner>
                 </StyledHero> 
                 <section className="single-room">

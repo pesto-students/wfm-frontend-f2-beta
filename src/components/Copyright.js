@@ -2,10 +2,10 @@ import React from 'react'
 
 const Copyright = () => {
     return (
-        <div>
-            <br/>
-            <br/>
-            <h6 style={{textAlign:'center'}}>@workfrommountains.com.All rights reserved</h6>
+        <div>  
+            <hr/>             
+            <h6 style={{textAlign:'center'}}>mail us : support@wfm.com</h6>
+            <h6 style={{textAlign:'center'}}>Copyright@workfrommountains.com.All rights reserved</h6>
         </div>
     )
 }
