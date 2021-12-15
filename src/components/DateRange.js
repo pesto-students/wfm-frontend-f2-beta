@@ -28,7 +28,7 @@ class DateRange extends React.Component {
 
   renderSelectionValue = () => {
     return (
-      <div>
+      <div style={{color:'white'}}>
         {/* <div>Selection</div> */}
         {this.state.value.start.format("DD-MM-YYYY")}
         {" - "}

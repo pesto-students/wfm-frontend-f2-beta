@@ -52,13 +52,13 @@ const BookedProperties = () => {
             <Hero>
                 <section style={{marginTop:'40px',paddingTop:'30px'}} className="parent_booked_property">
                     <section className="child_booked_property">
-                        <h5>Property: {from} home</h5>
-                        <h6>Booking id :{bookId}</h6>
+                        <h5 style={{color:'white'}}>Property: {from} home</h5>
+                        <h6 style={{color:'white'}}>Booking id :{bookId}</h6>
                         {/* <h3>At: {rooms[0].place}</h3> */}
-                        <h4>Price: ₹{price} per-night</h4>    
+                        <h4 style={{color:'white'}}>Price: ₹{price} per-night</h4>    
                         {/* <h6>Work Space for : {rooms[0].capacity > 1 ? `${rooms[0].capacity} people`:`${rooms[0].capacity} Person`}</h6>                    */}
-                        <h4>Select dates for your stay</h4>
-                        <h6>Selected dates:</h6>
+                        <h4 style={{color:'white'}}>Select dates for your stay</h4>
+                        <h6 style={{color:'white'}}>Selected dates:</h6>
                         <DateRange className="book-rooms-center"/>  
                     </section> 
                     <section classname="checkout_booked_property">

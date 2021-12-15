@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import logo from '../images/final_Logo.jpeg';
 import {FaAlignRight} from 'react-icons/fa';
+import{BiHomeHeart} from 'react-icons/bi'
+import {RiContactsLine} from 'react-icons/ri'
+import {MdOutlineHomeWork} from 'react-icons/md'
 import {Link} from "react-router-dom"
 import '../App.css'
 
@@ -33,13 +36,13 @@ export default class Navbar extends Component {
                             <Link to="/">Home</Link>
                         </li> */}
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/"><BiHomeHeart size='40'/>Home</Link>
                         </li>
                         <li>
-                            <Link to="/properties">Properties</Link>
+                            <Link to="/properties"><MdOutlineHomeWork size='40'/>Properties</Link>
                         </li>
                         <li>
-                            <Link to="/about-us">About-Us</Link>
+                            <Link to="/about-us"><RiContactsLine size='35'/>About-Us</Link>
                         </li>
                     </ul>
 

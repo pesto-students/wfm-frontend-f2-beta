@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import logo from '../images/final_Logo.jpeg';
 import {FaAlignRight} from 'react-icons/fa';
+import{BiHomeHeart} from 'react-icons/bi'
+import {RiContactsLine} from 'react-icons/ri'
+import {IoMailOutline} from 'react-icons/io5'
+import {MdOutlineHomeWork} from 'react-icons/md'
 import {Link} from "react-router-dom"
 import '../App.css'
 
@@ -30,16 +34,16 @@ export default class Navbar extends Component {
                     </div>
                     <ul className={this.state.isOpen?"nav-links show-nav":"nav-links"}>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/"><BiHomeHeart size='40'/>Home</Link>
                         </li>
                         <li>
-                            <Link to="/properties">Properties</Link>
+                            <Link to="/properties"><MdOutlineHomeWork size='40'/>Properties</Link>
                         </li>
                         <li>
-                            <Link to="/about-us">About-Us</Link>
+                            <Link to="/about-us"><RiContactsLine size='38'/>AboutUs</Link>
                         </li>                        
                         <li>
-                            <Link to="/Login">Login-SignUp</Link>
+                            <Link to="/Login"><IoMailOutline size='38'/>Login/SignUp</Link>
                         </li>
                     </ul>
                 </div>                

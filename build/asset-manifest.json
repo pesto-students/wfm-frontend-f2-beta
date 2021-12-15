@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.22c37545.chunk.css",
+    "main.js": "/static/js/main.aec7ad6b.chunk.js",
+    "main.js.map": "/static/js/main.aec7ad6b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ff5b8ea4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ff5b8ea4.js.map",
+    "static/css/2.6461da63.chunk.css": "/static/css/2.6461da63.chunk.css",
+    "static/js/2.b0409495.chunk.js": "/static/js/2.b0409495.chunk.js",
+    "static/js/2.b0409495.chunk.js.map": "/static/js/2.b0409495.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.6461da63.chunk.css.map": "/static/css/2.6461da63.chunk.css.map",
+    "static/css/main.22c37545.chunk.css.map": "/static/css/main.22c37545.chunk.css.map",
+    "static/js/2.b0409495.chunk.js.LICENSE.txt": "/static/js/2.b0409495.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/room-2.d432ac15.jpeg",
+    "static/media/details-1.6174df9c.jpeg": "/static/media/details-1.6174df9c.jpeg",
+    "static/media/details-2.f34f1009.jpeg": "/static/media/details-2.f34f1009.jpeg",
+    "static/media/details-3.9dd58a7f.jpeg": "/static/media/details-3.9dd58a7f.jpeg",
+    "static/media/details-4.cea45f63.jpeg": "/static/media/details-4.cea45f63.jpeg",
+    "static/media/final_Logo.fdfc2683.jpeg": "/static/media/final_Logo.fdfc2683.jpeg",
+    "static/media/loading-arrow.dd29210f.gif": "/static/media/loading-arrow.dd29210f.gif",
+    "static/media/room-1.98fb6f21.jpeg": "/static/media/room-1.98fb6f21.jpeg",
+    "static/media/room-10.d23c4cea.jpeg": "/static/media/room-10.d23c4cea.jpeg",
+    "static/media/room-11.e2b1819e.jpeg": "/static/media/room-11.e2b1819e.jpeg",
+    "static/media/room-12.2a3809b8.jpeg": "/static/media/room-12.2a3809b8.jpeg",
+    "static/media/room-3.bc62f946.jpeg": "/static/media/room-3.bc62f946.jpeg",
+    "static/media/room-4.5796cda6.jpeg": "/static/media/room-4.5796cda6.jpeg",
+    "static/media/room-5.7a0ce85e.jpeg": "/static/media/room-5.7a0ce85e.jpeg",
+    "static/media/room-6.1118ce5d.jpeg": "/static/media/room-6.1118ce5d.jpeg",
+    "static/media/room-7.e680e274.jpeg": "/static/media/room-7.e680e274.jpeg",
+    "static/media/room-8.c9556707.jpeg": "/static/media/room-8.c9556707.jpeg",
+    "static/media/room-9.af2be237.jpeg": "/static/media/room-9.af2be237.jpeg",
+    "static/media/sidebar-login.cbc25544.jpeg": "/static/media/sidebar-login.cbc25544.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff5b8ea4.js",
+    "static/css/2.6461da63.chunk.css",
+    "static/js/2.b0409495.chunk.js",
+    "static/css/main.22c37545.chunk.css",
+    "static/js/main.aec7ad6b.chunk.js"
+  ]
+}

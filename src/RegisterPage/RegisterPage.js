@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import sidebar from '../images/sidebar-login.jpeg'
+import {FaUser,FaUserCheck} from 'react-icons/fa'
+import {FiMail} from 'react-icons/fi'
+import {RiLockPasswordFill} from 'react-icons/ri'
 import '../App.css'
 
 import { userActions } from '../actions';
@@ -51,41 +54,42 @@ class RegisterPage extends React.Component {
         return (
             <>
             <div className="img_div">
-            <img src={sidebar} width="300px" height="356px" alt="sidebar-img"/>
+            <img src={sidebar} width="300px" height="400px" alt="sidebar-img"/>
             </div>
             <div className="login_div" >
-                <h2>Register</h2>
+                <h2>Sign-Up</h2>
                 <form name="form" onSubmit={this.handleSubmit}>
                     <div className={'form-group' + (submitted && !user.firstName ? ' has-error' : '')}>
-                        <label htmlFor="firstName">First Name*</label>
-                        <input type="text"  name="firstName" value={user.firstName} onChange={this.handleChange} />
+                        <label htmlFor="firstName">First Name*<FaUser/></label>
+                        <input type="text"  name="firstName" value={user.firstName} onChange={this.handleChange} placeholder ="your name" />
                         {submitted && !user.firstName &&
                             <div >First Name is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.lastName ? ' has-error' : '')}>
-                        <label htmlFor="lastName">Last Name*</label>
-                        <input type="text"  name="lastName" value={user.lastName} onChange={this.handleChange} />
+                        <label htmlFor="lastName">Last Name*<FaUserCheck/></label>
+                        <input type="text"  name="lastName" value={user.lastName} onChange={this.handleChange} placeholder ="your last name" />
                         {submitted && !user.lastName &&
                             <div >Last Name is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.username ? ' has-error' : '')}>
-                        <label htmlFor="username">Username*(Please put Email to register)</label>
-                        <input type="text" name="username" value={user.username} onChange={this.handleChange} />
+                        <label htmlFor="username">Username*<FiMail/></label>
+                        <input type="text" name="username" value={user.username} onChange={this.handleChange} placeholder ="your email" />
                         {submitted && !user.username &&
                             <div >Username is required</div>
                         }
                     </div>
                     <div className={'form-group' + (submitted && !user.password ? ' has-error' : '')}>
-                        <label htmlFor="password">Password*</label>
-                        <input type="password"  name="password" value={user.password} onChange={this.handleChange} />
+                        <label htmlFor="password">Password*<RiLockPasswordFill/></label>
+                        <input type="password"  name="password" value={user.password} onChange={this.handleChange} placeholder ="your password"/>
                         {submitted && !user.password &&
                             <div >Password is required</div>
                         }
                     </div>
                     <div className="form-group">
-                        <button >Register</button>
+                        <br/>
+                        <button className="btn-primary">Sign-Up</button>
                         {registering && 
                             <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt = "From register page"/>
                         }
