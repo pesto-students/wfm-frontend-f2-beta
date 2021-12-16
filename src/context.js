@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-// import items from "./data";
 import Client from './Contentful';
-// import { response } from "express";
-
-// Client.getEntries({
-//   content_type:"workFromMountains"
-// }).then(response => console.log(response.items));
-
 
 //This is context for all the consumers
 const RoomContext = React.createContext();
@@ -72,36 +65,9 @@ class RoomProvider extends Component {
     }
   }
 
-
-
-
   componentDidMount() {
     this.getData()
-    // let rooms = this.formatData(items);
-    // let featuredRooms = rooms.filter(room => room.featured === true);
-    // let maxPrice = Math.max(...rooms.map(item =>item.price))
-
-    // //Calculate random booking-Id
-    // const min = 1;
-    // const max = 100;
-    // const bookId = Math.floor(min + (Math.random() * (max - min)));
-
-
     
-    // //states updated
-    // this.setState({
-    //   rooms,
-    //   featuredRooms,
-    //   sortedRooms: rooms,      
-    //   loading: false,
-    //   price:maxPrice,
-    //   slug:'None',
-    //   maxPrice,
-    //   bookId:bookId,
-    //   bookedRooms:rooms,
-    //   // place,
-    // //   maxSize
-    // });
   }
 
   formatData(items) {
@@ -189,7 +155,7 @@ class RoomProvider extends Component {
 
   render() {
     return (
-      <RoomContext.Provider value={{ ...this.state,getRoom:this.getRoom,handleChange:this.handleChange,handleClick:this.handleClick}}>
+      <RoomContext.Provider value={{ ...this.state,getRoom:this.getRoom,handleChange:this.handleChange}}>
         {this.props.children}
       </RoomContext.Provider>
     );
