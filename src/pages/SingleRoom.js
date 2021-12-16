@@ -26,8 +26,6 @@ export default class SingleRoom extends Component {
 
 
     handleClick=(name)=>{
-        // console.log("Button is clicked"); 
-        // console.log(this);
         name = Object.assign({},this.state.name);
         name="state changed";
         this.setState({name});

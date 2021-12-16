@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import items from "./data";
+// import items from "./data";
+import Client from './Contentful';
+// import { response } from "express";
+
+// Client.getEntries({
+//   content_type:"workFromMountains"
+// }).then(response => console.log(response.items));
 
 
 //This is context for all the consumers
@@ -29,36 +35,73 @@ class RoomProvider extends Component {
   
   //getData
 
+  getData = async () =>{
+    try {
+      let response = await Client.getEntries({
+        content_type:"workFromMountains",
+        // order: 'sys.createdAt'
+        order:'fields.price'
+      });
+      let rooms = this.formatData(response.items);
+      let featuredRooms = rooms.filter(room => room.featured === true);
+      let maxPrice = Math.max(...rooms.map(item =>item.price))
+  
+      //Calculate random booking-Id
+      const min = 1;
+      const max = 100;
+      const bookId = Math.floor(min + (Math.random() * (max - min)));
+  
+  
+      
+      //states updated
+      this.setState({
+        rooms,
+        featuredRooms,
+        sortedRooms: rooms,      
+        loading: false,
+        price:maxPrice,
+        slug:'None',
+        maxPrice,
+        bookId:bookId,
+        bookedRooms:rooms,
+        // place,
+      //   maxSize
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+
   componentDidMount() {
-    let rooms = this.formatData(items);
-    // console.log(rooms);
-    //This will bring all the featured rooms
-    let featuredRooms = rooms.filter(room => room.featured === true);
+    this.getData()
+    // let rooms = this.formatData(items);
+    // let featuredRooms = rooms.filter(room => room.featured === true);
+    // let maxPrice = Math.max(...rooms.map(item =>item.price))
 
-    //Calculating the Max Price from all the rooms
-    let maxPrice = Math.max(...rooms.map(item =>item.price))
-
-    //Calculate random booking-Id
-    const min = 1;
-    const max = 100;
-    const bookId = Math.floor(min + (Math.random() * (max - min)));
+    // //Calculate random booking-Id
+    // const min = 1;
+    // const max = 100;
+    // const bookId = Math.floor(min + (Math.random() * (max - min)));
 
 
     
-    //states updated
-    this.setState({
-      rooms,
-      featuredRooms,
-      sortedRooms: rooms,      
-      loading: false,
-      price:maxPrice,
-      slug:'None',
-      maxPrice,
-      bookId:bookId,
-      bookedRooms:rooms,
-      // place,
-    //   maxSize
-    });
+    // //states updated
+    // this.setState({
+    //   rooms,
+    //   featuredRooms,
+    //   sortedRooms: rooms,      
+    //   loading: false,
+    //   price:maxPrice,
+    //   slug:'None',
+    //   maxPrice,
+    //   bookId:bookId,
+    //   bookedRooms:rooms,
+    //   // place,
+    // //   maxSize
+    // });
   }
 
   formatData(items) {
@@ -87,15 +130,6 @@ class RoomProvider extends Component {
       },this.filterRooms)
      
     //   console.log(type,name,value);
-  }
-
-  handleClick=(event)=>{
-  //   const value =event.type.target.value    
-  //   const name = event.target.name
-    // console.log(slug);
-    this.setState({
-      slug:'BookYourRoom'
-    },this.bookedRooms)    
   }
 
 
