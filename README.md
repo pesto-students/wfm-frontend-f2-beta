@@ -4,15 +4,15 @@ It is a Property Booking website for people who wants to work from mountains and
 
 Available Pages:
 
-Main Landing Page
+1.Main Landing Page
 
-Properties List page
+2.Properties List page
 
-Single Property Detail page
+3.Single Property Detail page
 
-Booking page
+4.Booking page
 
-Login-signUp Page
+5.Login-signUp Page
 
-User Profile Page
+6.User Profile Page
 
