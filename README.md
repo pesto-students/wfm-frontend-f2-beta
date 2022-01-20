@@ -52,6 +52,7 @@ We tried to use a completely modern tech stack while testing out some new techno
 - [@Megha vashist](meghvashist@gmail.com)
 
 <br/>
+
 ## License
 
-Distributed under the MIT License.
+Distributed under the MIT License.See LICENSE for more information.
