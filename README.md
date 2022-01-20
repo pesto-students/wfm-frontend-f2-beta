@@ -4,7 +4,7 @@ It is a Property Booking website for people who wants to work from mountains and
 
 <br/>
 
-# Table of Content
+# Table of Contents
 
 1. [Demo](#demo)
 2. [Installation](#installation)
