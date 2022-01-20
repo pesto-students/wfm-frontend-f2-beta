@@ -2,21 +2,6 @@
 
 It is a Property Booking website for people who wants to work from mountains and long stay. This project aim to create a Property booking system which is used by users/Customers to search and book best properties and work from there. Focus mainly on properties in mountains. User can see different services offered by different properties. Display result according to user search.
 
-# Available Pages:
-
-1. Main Landing Page
-
-2. Properties List page
-
-3. Single Property Detail page
-
-4. Booking page
-
-5. Login-signUp Page
-
-6. User Profile Page
-
-
 <br/>
 
 # Table of Content
@@ -25,6 +10,7 @@ It is a Property Booking website for people who wants to work from mountains and
 2. [Installation](#installation)
 3. [Technology Stack](#technology-stack)
 4. [Authors](#authors)
+5. [License]
 
 <br/>
 
@@ -63,6 +49,10 @@ We tried to use a completely modern tech stack while testing out some new techno
 <br/>
 
 ## Authors
-- [@Megha vashist](https://github.com/pesto-students/wfm-frontend-f2-beta/tree/devcont)
+- [@Megha vashist](meghvashist@gmail.com)
 
 <br/>
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License.
