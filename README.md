@@ -10,7 +10,7 @@ It is a Property Booking website for people who wants to work from mountains and
 2. [Installation](#installation)
 3. [Technology Stack](#technology-stack)
 4. [Authors](#authors)
-5. [License]
+5. [License](#license)
 
 <br/>
 
